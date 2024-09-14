@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/axiosInstance.tsx","./src/data.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/hooks/useCreateQuestion.tsx","./src/hooks/useQuestionIndex.tsx","./src/pages/Super.tsx","./src/pages/admin/Admin.tsx","./src/pages/mainpage/MainPage.tsx","./src/pages/super/boxes/Boxes.tsx"],"version":"5.6.2"}

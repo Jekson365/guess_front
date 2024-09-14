@@ -1,0 +1,134 @@
+@import '../config.scss';
+
+.line {
+    width: 20px;
+    height: 2px;
+    background-color: $main-green;
+    margin-top: 10px;
+}
+.point {
+    border: 2px solid $main-green;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    border-radius: 5px;
+    .plus-one {
+        color: $main-green;
+        position: absolute;
+        right: 10px;
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    .plus-one-anim {
+        transition: 0.8s ease-out;
+        transform: translateY(-80px);
+        opacity: 1;
+    }
+}
+
+
+.answered {
+    background-color: $main-green-transparent;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px 1px $main-green-transparent;
+}
+
+.not-answered {
+    box-shadow: 0 0 0 0;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+.super-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 60px 20px;
+    height: 80vh;
+    gap: 30px;
+
+    h1 {
+        font-size: 20px;
+        color: white;
+        @media screen and (max-width:930px) {
+            & {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .cover {
+        margin: 20px;
+
+        .box {
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+            width: 450px;
+            height: 450px;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease-out;
+            cursor: pointer;
+            @media screen and (max-width:930px) {
+                & {
+                    width: 100%;
+                    height: 180px;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 0px 30px 2px $main-green-transparent inset;
+            }
+
+            &:hover .overlay {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            .answer {
+                color: white;
+            }
+
+            .overlay {
+                transition: 0.3s;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+
+.slide-left {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.slide-right {
+    transition: transform 0.3s ease-out;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.powered {
+    font-size: 14px;
+    color: white;
+
+    span {
+        color: $main-green;
+    }
+}

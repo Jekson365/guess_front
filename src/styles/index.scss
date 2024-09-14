@@ -1,0 +1,88 @@
+@import './config.scss';
+@import url("//cdn.web-fonts.ge/fonts/bpg-boxo/css/bpg-boxo.min.css");
+
+* {
+    margin: 0;
+    font-family: "BPG Boxo", sans-serif;
+    padding: 0;
+}
+
+
+body {
+    overflow: hidden;
+    background-color: #272626;
+}
+
+.col {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: white;
+
+    h1 {
+
+        box-shadow: 0 0 10p 1px rgba(255, 255, 255, 0.915);
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+.begin-button {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    border: 4px solid $main-green;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+        a {
+            color: $main-green;
+        }
+        background-color: white;
+        color: $main-green;
+    }
+}
+
+.main-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-position: center center;
+
+    // background-image: url('https://i.makeagif.com/media/4-25-2021/acjkHz.gif');
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.415);
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        object-fit: cover;
+    }
+}
