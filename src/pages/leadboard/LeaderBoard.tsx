@@ -18,7 +18,10 @@ const LeaderBoard = () => {
         <Box
             style={{
                 maxWidth: "900px",
-                margin: "50px auto"
+                margin: "50px auto",
+                maxHeight:"800px",
+                overflowY:"scroll",
+                overflowX:"hidden"
             }}
             className='leadboard'
         >
