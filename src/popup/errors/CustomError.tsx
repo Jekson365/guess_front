@@ -1,5 +1,4 @@
-import { Alert, Box, Dialog } from "@mui/material"
-import zIndex from "@mui/material/styles/zIndex"
+import { Alert, Box } from "@mui/material"
 
 export const CustomError = () => {
     return (
