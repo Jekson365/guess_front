@@ -17,6 +17,7 @@ const MainPage = () => {
                         zIndex={'10'}
                         gap={'40px'}
                         height={'100%'}
+                        textAlign={'center'}
                     >
                         <img src={logo}
                             width={'100px'}

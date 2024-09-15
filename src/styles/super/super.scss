@@ -6,6 +6,36 @@
     background-color: $main-green;
     margin-top: 10px;
 }
+.lead {
+    a {
+        transition: 0.3s;
+        color: white;
+        
+        &:hover {
+            cursor: pointer;
+            color: $main-green;
+        }
+    }
+}.back-icon {
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    background-color: $main-green;
+    &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: $main-green;
+    }
+    .icon {
+        transform: translateX(5px);
+    }
+    margin-bottom: 30px;
+}
 .point {
     border: 2px solid $main-green;
     color: white;
@@ -26,6 +56,15 @@
         transform: translateY(-80px);
         opacity: 1;
     }
+    @media screen and (max-width: 900px) {
+        & {
+            font-size: 13px;
+            padding: 5px 10px;
+        }
+        img {
+            width: 20px;
+        }
+    } 
 }
 
 
@@ -75,13 +114,14 @@
             position: relative;
             display: flex;
             align-items: center;
+            text-align: center;
             justify-content: center;
             transition: 0.3s ease-out;
             cursor: pointer;
             @media screen and (max-width:930px) {
                 & {
                     width: 100%;
-                    height: 180px;
+                    height: 250px;
                 }
             }
 

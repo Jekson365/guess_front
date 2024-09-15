@@ -1,0 +1,12 @@
+@import './config.scss';
+
+.leadboard {
+    .color-white {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+}
+.current-color {
+    color: $main-green !important;
+}
