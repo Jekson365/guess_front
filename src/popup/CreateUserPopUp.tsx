@@ -22,6 +22,9 @@ export const CreateUserPopUp = () => {
             createUser({ username: user })
             setErrors([])
             setOpen(false)
+            setTimeout(()=> {
+                window.location.reload()
+            },300)
         }
         catch (err) {
             throw err
