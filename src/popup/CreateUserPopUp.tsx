@@ -22,9 +22,6 @@ export const CreateUserPopUp = () => {
             createUser({ username: user })
             setErrors([])
             setOpen(false)
-            setTimeout(()=> {
-                window.location.reload()
-            },200)
         }
         catch (err) {
             throw err
@@ -41,7 +38,7 @@ export const CreateUserPopUp = () => {
                 <Box
                     style={{ background: "rgb(55,55,55)" }}
                     p={5}
-                    className='pop'
+                className='pop'
                 >
                     <Stack
                         direction={'column'}
