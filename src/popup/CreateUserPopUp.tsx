@@ -20,14 +20,17 @@ export const CreateUserPopUp = () => {
     const submitUser = async () => {
         try {
             createUser({ username: user })
+
+        }
+        catch (err) {
+            throw err
+        }
+        if (errors.length < 1) {
             setErrors([])
             setOpen(false)
             setTimeout(()=> {
                 window.location.reload()
-            },300)
-        }
-        catch (err) {
-            throw err
+            },500)
         }
     };
     useEffect(() => {

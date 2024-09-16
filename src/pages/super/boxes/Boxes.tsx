@@ -151,8 +151,10 @@ export const Boxes = () => {
           </div>
 
           <Stack width={'100%'} justifyContent={'space-between'} direction={'row'} mt={3}>
-            <h4 className="powered">Powered by <span>Puzzles</span></h4>
-            <h4 className="powered">{count} / 100</h4>
+            <h4 className="powered">Powered by <span><Link
+              to={''}
+            >Puzzles</Link></span></h4>
+            <h4 className="powered">{count} / 30</h4>
           </Stack>
         </div>
         {lastAnswered ? (<>
