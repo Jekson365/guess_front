@@ -33,20 +33,20 @@ export const Boxes = () => {
     if (clickable) {
       setCount(count + 1);
       setQuestion((prevId: any) => prevId + 1);
-  
+
       let updatedPoint = point;
-  
+
       if (result) {
-        updatedPoint = point + 1; 
+        updatedPoint = point + 1;
         setPoint(updatedPoint);
         sound();
         setAnsweredStyle('answered');
         setPlusAnim('plus-one-anim');
       }
-  
+
       setClickable(false);
       setAnswered(true);
-  
+
       if (isLast) {
         updateScore({ user_id: user, score: updatedPoint });
         setLastAnswered(true);
@@ -54,7 +54,7 @@ export const Boxes = () => {
         updateScore({ user_id: user, score: point });
         setLastAnswered(true);
       }
-  
+
       setTimeout(() => {
         setAnswered(false);
         setClickable(true);
@@ -151,9 +151,8 @@ export const Boxes = () => {
           </div>
 
           <Stack width={'100%'} justifyContent={'space-between'} direction={'row'} mt={3}>
-            <h4 className="powered">Powered by <span><Link
-              to={''}
-            >Puzzles</Link></span></h4>
+            <h4 className="powered">Powered by <span
+              className="color-main"><Link to={'https://www.facebook.com/profile.php?id=61563257647892'}>Puzzles</Link></span></h4>
             <h4 className="powered">{count} / 30</h4>
           </Stack>
         </div>
