@@ -9,9 +9,11 @@ import { CreateUserPopUp } from "../../../popup/CreateUserPopUp";
 import { useScoreUpdate } from "../../../hooks/users/useScoreUpdate";
 import { CurrentUserContext } from "../../../App";
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import { useCheckAnswer } from "../../../hooks/questions/useCheckAnswer";
 
 export const Boxes = () => {
   const { questions, fetchQuestions, loading, isLast } = useQuestionIndex();
+  const { checkAnswer } = useCheckAnswer()
   const { user } = useContext(CurrentUserContext)
   const [point, setPoint] = useState(0)
   const [QuestionPosition, setQuestion] = useState(1);
@@ -29,7 +31,13 @@ export const Boxes = () => {
     audio.play()
   }
 
-  const handleSlider = (result: any) => {
+  const findAnswer = async (id: Number) => {
+    let result = await checkAnswer(id)
+    return result
+  }
+
+  const handleSlider = async (id: any) => {
+    let result = await findAnswer(id)
     if (clickable) {
       setCount(count + 1);
       setQuestion((prevId: any) => prevId + 1);
@@ -115,7 +123,7 @@ export const Boxes = () => {
                 <Grid2 size={{ xs: 12, md: 6 }}>
                   <div
                     className="box"
-                    onClick={() => handleSlider(questions?.answers[0]?.is_true)}
+                    onClick={() => handleSlider(questions?.answers[0]?.id)}
 
                     style={{
                       backgroundColor: `${questions?.answers[0]?.image.url == '' ? 'red' : null}`,
@@ -131,7 +139,7 @@ export const Boxes = () => {
                 <Grid2 size={{ xs: 12, md: 6 }}>
                   <div
                     className="box"
-                    onClick={() => handleSlider(questions?.answers[1]?.is_true)}
+                    onClick={() => handleSlider(questions?.answers[1]?.id)}
                     style={{
                       backgroundImage: `url(${baseUrl + (questions?.answers[1]?.image.url || '')})`
                     }}
