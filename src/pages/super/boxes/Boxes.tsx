@@ -89,7 +89,7 @@ export const Boxes = () => {
       <div className="super-cover">
         <div className="cover">
           <Stack direction={'row'} justifyContent={'space-between'} gap={'5px'} width={'100%'} mb={5} alignItems={'flex-start'}>
-            <Stack direction={'column'} alignItems={'flex-start'}>
+            <Stack direction={'column'} alignItems={'flex-start'} pr={3}>
               {!lastAnswered ? (<>
                 <h1>{questions?.question}</h1>
                 <div className="line"></div>

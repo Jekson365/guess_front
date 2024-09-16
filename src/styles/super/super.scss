@@ -102,7 +102,11 @@
 
     .cover {
         margin: 20px;
-
+        @media screen and (max-width: 600px) {
+            & {
+                width: 100%;
+            }
+        }
         .box {
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
             width: 450px;
