@@ -17,7 +17,7 @@ const LeaderBoard = () => {
     return (
         <Box
             style={{
-                maxWidth: "900px",
+                maxWidth: "350px",
                 margin: "50px auto",
                 maxHeight:"800px",
                 overflowY:"scroll",
@@ -33,7 +33,7 @@ const LeaderBoard = () => {
                 </Link>
             </Stack>
             <TableContainer>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table aria-label="simple table">
                     <TableHead>
                         <TableRow>
                             <TableCell className="color-white">სახელი</TableCell>
