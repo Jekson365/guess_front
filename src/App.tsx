@@ -2,14 +2,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Super from "./pages/Super"
 import MainPage from "./pages/mainpage/MainPage"
 import Admin from "./pages/admin/Admin"
-import { createContext, useEffect } from "react"
+import { createContext } from "react"
 import { useUserCookie } from "./hooks/users/useUserCookie"
 import LeaderBoard from "./pages/leadboard/LeaderBoard"
 
 export const CurrentUserContext = createContext<any>({})
 
 function App() {
-  const { getCookie, user } = useUserCookie()
+  const { user } = useUserCookie()
 
   // useEffect(()=> {
   //   getCookie()
