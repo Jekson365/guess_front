@@ -91,9 +91,9 @@ export const Boxes = () => {
 
   return (
     <>
-      {!user ? (<>
-        <CreateUserPopUp />
-      </>) : null}
+      {/*{!user ? (<>*/}
+      {/*  <CreateUserPopUp />*/}
+      {/*</>) : null}*/}
       <div className="super-cover">
         <div className="cover">
           <Stack direction={'row'} justifyContent={'space-between'} gap={'5px'} width={'100%'} mb={5} alignItems={'flex-start'}>
@@ -109,11 +109,11 @@ export const Boxes = () => {
                 <img width={'30px'} src={logo} alt=" Logo" className="logo" />
                 {point}
               </Stack>
-              <Stack direction={'row'} alignItems={'center'} gap={'10px'} className={`point lead`}>
-                <Link to={'/lead'}>
-                  <LeaderboardIcon />
-                </Link>
-              </Stack>
+              {/*<Stack direction={'row'} alignItems={'center'} gap={'10px'} className={`point lead`}>*/}
+              {/*  <Link to={'/lead'}>*/}
+              {/*    <LeaderboardIcon />*/}
+              {/*  </Link>*/}
+              {/*</Stack>*/}
             </Stack>
           </Stack>
 
