@@ -11,9 +11,9 @@ export const CurrentUserContext = createContext<any>({})
 function App() {
   const { getCookie, user } = useUserCookie()
 
-  useEffect(()=> {
-    getCookie()
-  },[user])
+  // useEffect(()=> {
+  //   getCookie()
+  // },[user])
 
   return (
     <>
