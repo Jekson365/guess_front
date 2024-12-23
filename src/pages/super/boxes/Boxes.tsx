@@ -5,10 +5,8 @@ import clickSound from '../../../../public/sound.mp3'; // or a URL to the sound 
 import { useQuestionIndex } from "../../../hooks/useQuestionIndex";
 import { baseUrl } from "../../../axiosInstance";
 import { Link } from "react-router-dom";
-import { CreateUserPopUp } from "../../../popup/CreateUserPopUp";
 import { useScoreUpdate } from "../../../hooks/users/useScoreUpdate";
 import { CurrentUserContext } from "../../../App";
-import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import { useCheckAnswer } from "../../../hooks/questions/useCheckAnswer";
 
 export const Boxes = () => {
